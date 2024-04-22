@@ -7,3 +7,6 @@ while f == "bye":
 b = input("Введите строку: ")
 while b != "hello":
     print("coat")
+st = input("Введите строку:")
+while st != "oh my coat":
+    print("oh my coat")
