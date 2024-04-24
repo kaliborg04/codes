@@ -1,5 +1,5 @@
 s = input("Введите строку: ")
-while s != "bye":
+while s != "byrrrrrr":
     print("Hello")
 f = input("Введите строку: ")
 while f == "bye":
@@ -10,3 +10,7 @@ while b != "hello":
 st = input("Введите строку:")
 while st != "oh my coat":
     print("oh my coat")
+coat = input("Введите строку:")
+while coat >= s: 
+    print(coat + s)
+    print("ok")
