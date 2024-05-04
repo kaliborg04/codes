@@ -1,0 +1,5 @@
+s1 = input("Enter number: ")
+s2 = input("Enter number: ")
+n1 = int(s1)
+n2 = int(s2)
+print(n1 + n2)
