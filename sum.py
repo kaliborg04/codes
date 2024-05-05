@@ -19,3 +19,10 @@ if n1 < 5:
 if n2 < 5:
     print("NO NO NO NO NO NO NO NOOOOOOOOOOOOOO)!")
     exit()
+
+if n1 > 100:
+    print("NOT!")
+    exit()
+if n2 > 100:
+    print("NOT!")
+    exit()
