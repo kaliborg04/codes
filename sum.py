@@ -2,7 +2,6 @@ s1 = input("Enter number: ")
 s2 = input("Enter number: ")
 n1 = int(s1)
 n2 = int(s2)
-print(n1 + n2)
 
 if n1 == 0:
     print("NO!")
@@ -23,6 +22,10 @@ if n2 < 5:
 if n1 > 100:
     print("NOT!")
     exit()
+
 if n2 > 100:
     print("NOT!")
     exit()
+
+print("GOOD! VERY GOOD INDEED!")
+print(n1 + n2)
