@@ -1,6 +1,6 @@
 stars = {}
 while True:
-    star = input('Enter srar: ')
+    star = input('Enter star: ')
     if star == '':
         break
     if star not in stars:
