@@ -5,6 +5,8 @@ i = random.randint(0, 5)
 p1name = names[i]
 i = random.randint(0, 5)
 p2name = names[i]
+if p1name == p2name:
+    p2name += '2'
 print(p1name, 'vs', p2name)
 
 wins = {}
