@@ -1,11 +1,14 @@
-monstor = 17
-c = 0
-while monstor >= c:
-    m = input('Enter number: ')
-    o = input('Enter srin: ')
-    if m == 0:
+numbers = [] 
+strings = []
+i = 6
+while i > 0:
+    n = int(input('Enter number: '))
+    s = input('Enter string: ')
+    if n == 0:
         break
-    if o == 0:
+    if s == '':
         break
-monstor -= 1
-print('GOOD', number, scrin)
+    i -= 1
+    numbers.append(n)
+    strings.append(s)
+print('GOOD', numbers, strings)
