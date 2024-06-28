@@ -1,13 +1,12 @@
-
-live = int(input('Enter 1 or enter: '))
-died = int(input('Enter -1 or enter: '))
-if died == -1:
-    print('oh no you are died')
-if died == 0:
-    print('you are not died')
-if live == 1:
-    print('you are live')
-if live == 0:
-    print('you are not live')
+alive = int(input('Enter 1 or 0: '))
+dead = int(input('Enter -1 or 0: '))
+if dead == -1:
+    print('oh no you are dead')
+if dead == 0:
+    print('you are not dead')
+if alive == 1:
+    print('you are alive')
+if alive == 0:
+    print('you are not alive')
 
 
