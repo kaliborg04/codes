@@ -1,7 +1,6 @@
 string = input("Enter string: ")
 string = string.upper()
-print(string)
-string = string.split(' ')
+string = string.split()
 print(string)
 string = string[0]
 print(string)
