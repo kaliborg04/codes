@@ -1,8 +1,9 @@
 string = input("Enter string: ")
 string = string.upper()
-string = string.split()
 print(string)
-string = string[0]
-print(string)
-string = string[1]
-print(string)
+words = string.split()
+print('Number of words:', len(words))
+if len(words) >= 1:
+    print('First word:', words[0])
+if len(words) >= 2:
+    print('Second word:', words[1])
