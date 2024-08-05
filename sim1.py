@@ -18,10 +18,10 @@ shape.elasticity = 0.7
 shape.friction = 1
 space.add(body, shape)
 
-line = pymunk.Segment(space.static_body, (0, 400), (500, 500), 0)
-line.elasticity = 0.7
-line.friction = 1
-space.add(line)
+line1 = pymunk.Segment(space.static_body, (0, 460), (500, 98), 0)
+line1.elasticity = 0.7
+line1.friction = 1
+space.add(line1)
 
 while True:
    space.step(1/60)
