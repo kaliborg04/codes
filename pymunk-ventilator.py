@@ -27,7 +27,7 @@ line3.elasticity = 0.5
 line3.friction = 0.1
 space.add(line3)
 
-line4 = pymunk.Segment(space.static_body, (500, 0), (500, 400), 5)
+line4 = pymunk.Segment(space.static_body, (500, 0), (500, 300), 5)
 line4.elasticity = 0.5
 line4.friction = 0.1
 space.add(line4)
