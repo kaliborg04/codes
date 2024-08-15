@@ -11,18 +11,6 @@ space = pymunk.Space()
 space.gravity = (0, 1000)
 draw_opts = pymunk.pygame_util.DrawOptions(screen)
 
-i = 0
-while i < 10:
-    body = pymunk.Body()
-    x = random.randint(100, 400)
-    body.position = (x, 0)
-    r = random.randint(10, 20)
-    shape = pymunk.Circle(body, r)
-    shape.mass = 1
-    shape.elasticity = 0.7
-    shape.friction = 1
-    space.add(body, shape)
-    i += 1
 
 line1 = pymunk.Segment(space.static_body, (0, 500), (0, 100), 5)
 line1.elasticity = 0.5
@@ -49,6 +37,16 @@ line5.elasticity = 0.5
 line5.friction = 0.1                       
 space.add(line5)
 
+i = 0
+while i < 20:
+    body = pymunk.Body()
+    body.position = (400, 50)
+    shape = pymunk.Circle(body, 20)
+    shape.mass = 1
+    shape.elasticity = 0.5
+    shape.friction = 0.1
+    space.add(body, shape)
+    i += 1
 while True:
    space.step(1/60)
    screen.fill((0, 0, 0))
