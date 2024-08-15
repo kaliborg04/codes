@@ -32,7 +32,7 @@ line4.elasticity = 0.5
 line4.friction = 0.1
 space.add(line4)
 
-line5 = pymunk.Segment(space.static_body, (500,  400), (100, 450), 5)
+line5 = pymunk.Segment(space.static_body, (500,  300), (100, 350), 5)
 line5.elasticity = 0.5
 line5.friction = 0.1                       
 space.add(line5)
@@ -41,12 +41,14 @@ i = 0
 while i < 20:
     body = pymunk.Body()
     body.position = (400, 50)
-    shape = pymunk.Circle(body, 20)
-    shape.mass = 1
+    r = random.randint(10, 20)
+    shape = pymunk.Circle(body, r)
+    shape.mass = r/10
     shape.elasticity = 0.5
     shape.friction = 0.1
     space.add(body, shape)
     i += 1
+
 while True:
    space.step(1/60)
    screen.fill((0, 0, 0))
