@@ -38,6 +38,7 @@ line5.friction = 0.1
 space.add(line5)
 
 i = 0
+bodies = []
 while i < 20:
     body = pymunk.Body()
     body.position = (400, 50)
@@ -46,12 +47,13 @@ while i < 20:
     shape.mass = r/10
     shape.elasticity = 0.5
     shape.friction = 0.1
+    bodies.append(body)
     space.add(body, shape)
     i += 1
 
 while True:
-   space.step(1/60)
-   screen.fill((0, 0, 0))
-   space.debug_draw(draw_opts)
-   pygame.display.flip()
-   clock.tick(60)
+    space.step(1/60)
+    screen.fill((0, 0, 0))
+    space.debug_draw(draw_opts)
+    pygame.display.flip()
+    clock.tick(60)
