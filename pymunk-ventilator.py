@@ -52,6 +52,10 @@ while i < 20:
     i += 1
 
 while True:
+    for body in bodies:
+        if body.position.y > 550:
+            body.position = (400, 50)
+
     space.step(1/60)
     screen.fill((0, 0, 0))
     space.debug_draw(draw_opts)
