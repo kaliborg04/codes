@@ -11,7 +11,9 @@ boids = []
 for i in range(N):
     x = random.randint(0, 500)
     y = random.randint(0, 500)
-    boid = {'x': x, 'y': y}
+    vx = random.randint(-2, 2)
+    vy = random.randint(-2, 2)
+    boid = {'x': x, 'y': y, 'vx': vx, 'vy': vy}
     boids.append(boid)
 
 while True:
