@@ -19,6 +19,8 @@ for i in range(N):
 while True:
     screen.fill((0, 0, 0))
     for boid in boids:
+        boid['x'] += boid['vx']
+        boid['y'] += boid['vy']
         pygame.draw.circle(screen, (255, 0, 0), (boid['x'], boid['y']), 5)
     pygame.display.flip()
     clock.tick(60)
