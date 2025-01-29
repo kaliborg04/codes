@@ -26,6 +26,10 @@ for i in range(N):
 while True:
     screen.fill((0, 0, 0))
     for boid in boids:
+        if boid['x'] < 50:
+            boid['vx'] += 5
+        if boid['x'] > 450:
+            boid['vx'] += -5
         boid['x'] += boid['vx']
         boid['y'] += boid['vy']
         pygame.draw.circle(screen, boid['color'], (boid['x'], boid['y']), 5)
