@@ -29,7 +29,10 @@ for i in range(N):
 
 while True:
     screen.fill((0, 0, 0))
-    for boid in boids:
+    for i in range(len(boids)):
+        boid = boids[i]
+        for j in range(len(boids)):
+            other = boids[j]
         if boid['x'] < 50:
             boid['vx'] += 5
         if boid['x'] > 450:
