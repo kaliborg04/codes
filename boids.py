@@ -32,7 +32,15 @@ while True:
     for i in range(len(boids)):
         boid = boids[i]
         for j in range(len(boids)):
+            if j == i:
+                continue
             other = boids[j]
+            dist_x = boid['x'] - other['x']
+            dist_y = boid['y'] - other['y']
+            if abs(dist_x) < 20 and abs(dist_y) < 20:
+                boid['vx'] += dist_x * 0.1
+                boid['vy'] += dist_y * 0.1
+
         if boid['x'] < 50:
             boid['vx'] += 5
         if boid['x'] > 450:
