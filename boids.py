@@ -50,6 +50,15 @@ while True:
         if boid['y'] > 450:
             boid['vy'] += -5
 
+        if boid['vx'] > 5:
+            boid['vx'] = 5
+        if boid['vx'] < -5:
+            boid['vx'] = -5
+        if boid['vy'] > 5:
+            boid['vy'] = 5
+        if boid['vy'] < -5:
+            boid['vy'] = -5
+
         boid['x'] += boid['vx']
         boid['y'] += boid['vy']
         pygame.draw.circle(screen, boid['color'], (boid['x'], boid['y']), 5)
