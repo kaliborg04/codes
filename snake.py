@@ -10,11 +10,23 @@ snake = [
     {'xc': 26, 'yc': 25},
 ]
 
-speed = 1
+speed = 2
+dist = 0
 while True:
     t = clock.tick(60) / 1000
-    dist = speed * t
-    print(t)
+    dist += speed * t
+    print(t, dist)
+    if dist >= 1: 
+        dist -= 1
+        for i in range(len(snake) - 1):
+            cell = snake[i]
+            nxt = snake[i + 1]
+            cell['xc'] = nxt['xc']
+            cell['yc'] = nxt['yc']
+
+        head = snake[-1]
+        head['xc'] += 1
+
     screen.fill((0, 0, 0))
     for i, cell in enumerate(snake):
         if i % 2 == 0:
