@@ -1,4 +1,5 @@
 import pygame
+import random
 
 pygame.init()
 screen = pygame.display.set_mode([500, 500])
@@ -9,6 +10,7 @@ snake = [
     {'xc': 25, 'yc': 25},
     {'xc': 26, 'yc': 25},
 ]
+new = {'xc': random.randint(5, 45), 'yc': random.randint(30, 45)}
 
 UP = 0
 DOWN = 1
@@ -20,6 +22,8 @@ direction = RIGHT
 dist = 0
 while True:
     for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            exit()
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
                 direction = LEFT
@@ -53,6 +57,11 @@ while True:
             head['yc'] += 1
 
     screen.fill((0, 0, 0))
+
+    x = new['xc'] * 10
+    y = new['yc'] * 10
+    pygame.draw.rect(screen, (75, 255, 166), pygame.Rect(x, y, 10, 10))
+
     for i, cell in enumerate(snake):
         if i % 2 == 0:
             color = (255, 0, 0)
