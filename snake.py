@@ -76,7 +76,7 @@ while True:
     y = new['yc'] * 10
     pygame.draw.rect(screen, (75, 255, 166), pygame.Rect(x, y, 10, 10))
 
-    for i, cell in enumerate(snake):
+    for (i, cell) in enumerate(reversed(snake)):
         if i % 2 == 0:
             color = (255, 0, 0)
         else:
