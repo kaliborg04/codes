@@ -17,7 +17,7 @@ DOWN = 1
 LEFT = 2
 RIGHT = 3
 
-speed = 2
+speed = 4
 direction = RIGHT
 dist = 0
 while True:
@@ -55,6 +55,15 @@ while True:
             head['yc'] -= 1
         elif direction == DOWN:
             head['yc'] += 1
+
+        if head['xc'] > 49:
+            head['xc'] = 0
+        elif head['xc'] < 0:
+            head['xc'] = 49
+        elif head['yc'] > 49:
+            head['yc'] = 0
+        elif head['yc'] < 0:
+            head['yc'] = 49
 
     screen.fill((0, 0, 0))
 
