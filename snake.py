@@ -65,6 +65,11 @@ while True:
         elif head['yc'] < 0:
             head['yc'] = 49
 
+        if head['xc'] == new['xc'] and head['yc'] == new['yc']:
+            speed *= 1.1
+            snake.insert(0, new)
+            new = {'xc': 25, 'yc': 25}
+
     screen.fill((0, 0, 0))
 
     x = new['xc'] * 10
