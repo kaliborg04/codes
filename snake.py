@@ -68,8 +68,15 @@ while True:
         if head['xc'] == new['xc'] and head['yc'] == new['yc']:
             speed *= 1.1
             snake.insert(0, new)
-            new = {'xc': 25, 'yc': 25}
-
+            new = {
+                'xc': random.randint(0, 49),
+                'yc': random.randint(0, 49),
+            }
+            for cell in snake:
+                dist_x = abs(cell['xc'] - new['xc'])
+                dist_y = abs(cell['yc'] - new['yc'])
+                if abs(dist_x) < 5 and abs(dist_y) < 5:
+                    break 
     screen.fill((0, 0, 0))
 
     x = new['xc'] * 10
