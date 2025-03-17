@@ -65,6 +65,11 @@ while True:
         elif head['yc'] < 0:
             head['yc'] = 49
 
+        for i in range(len(snake) - 1):
+            cell = snake[i]
+            if head['xc'] == cell['xc'] and head['yc'] == cell['yc']:
+                speed = 0
+
         if head['xc'] == new['xc'] and head['yc'] == new['yc']:
             speed *= 1.1
             snake.insert(0, new)
