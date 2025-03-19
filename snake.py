@@ -25,14 +25,33 @@ while True:
         if event.type == pygame.QUIT:
             exit()
         if event.type == pygame.KEYDOWN:
+            newdir = None
             if event.key == pygame.K_LEFT:
-                direction = LEFT
+                newdir = LEFT
             elif event.key == pygame.K_RIGHT:
-                direction = RIGHT
+                newdir = RIGHT
             elif event.key == pygame.K_UP:
-                direction = UP
+                newdir = UP
             elif event.key == pygame.K_DOWN:
-                direction = DOWN
+                newdir = DOWN
+
+            if newdir is not None:            
+                newhead = snake[-1].copy()
+                if newdir == LEFT:
+                    newhead['xc'] -= 1
+                elif newdir == RIGHT:
+                    newhead['xc'] += 1
+                elif newdir == UP:
+                    newhead['yc'] -= 1
+                elif newdir == DOWN:
+                    newhead['yc'] += 1
+
+                cell2 = snake[-2]
+                if (newhead['xc'] == cell2['xc'] and
+                        newhead['yc'] == cell2['yc']):
+                    pass
+                else:
+                    direction = newdir
 
     t = clock.tick(60) / 1000
     dist += speed * t
