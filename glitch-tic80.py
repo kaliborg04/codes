@@ -7,11 +7,18 @@ timer = 0
 def TIC():
     global timer
 
-    timer = 30
+    for btn_id in range(8):
+        if btnp(btn_id):
+            timer = 30
+            break
+
     if timer > 0:
         poke(0x3ff9, randint(-5, 5))
         poke(0x3ffa, randint(-5, 5))
         timer -= 1
+        if timer == 0:
+            poke(0x3ff9, 0)
+            poke(0x3ffa, 0)
 
     cls(9)
     print('Press any key to glitch...', x=50, y=68, color=12)
