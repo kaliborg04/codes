@@ -11,13 +11,13 @@ def TIC():
     y = 136
     step = 20
     poke(0x3FF8, 2)
-    cls(2)
+    cls(12)
     for r in range(1, 7):
         circ(r, r * step, r, 0)
         circ(x -r - 1, r * step, r, 0)
         
         circ(r * step, r, r, 0)
-        circ(r* step, r, r, 0)
+        circ(r * step, y -r - 1, r, 0)
     
 
 # <TILES>
