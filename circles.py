@@ -1,9 +1,3 @@
-# title:   game title
-# author:  game developers, email, etc.
-# desc:    short description
-# site:    website link
-# license: MIT License (change this to your license of choice)
-# version: 0.1
 # script:  python
 
 def TIC():
@@ -15,10 +9,9 @@ def TIC():
     for r in range(1, 7):
         circ(r, r * step, r, 0)
         circ(x -r - 1, r * step, r, 0)
-        
+
         circ(r * step, r, r, 0)
-        circ(r * step, y -r - 1, r, 0)
-    
+        circ(r * step, y - r - 1, r, 0)
 
 # <TILES>
 # 001:eccccccccc888888caaaaaaaca888888cacccccccacc0ccccacc0ccccacc0ccc
