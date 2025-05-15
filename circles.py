@@ -6,30 +6,19 @@
 # version: 0.1
 # script:  python
 
-t=0
-x=96
-y=24
-
 def TIC():
- global t
- global x
- global y
-
- if btn(0): y-=1
- if btn(1): y+=1
- if btn(2): x-=1
- if btn(3): x+=1
-
- cls(13)
- spr(
-  1+t%60//30*2,
-  x,y,
-  colorkey=14,
-  scale=3,
-  w=2,h=2
- )
- print("HELLO WORLD!",84,84)
- t+=1
+    x = 240
+    y = 136
+    step = 20
+    poke(0x3FF8, 2)
+    cls(2)
+    for r in range(1, 7):
+        circ(r, r * step, r, 0)
+        circ(x -r - 1, r * step, r, 0)
+        
+        circ(r * step, r, r, 0)
+        circ(r* step, r, r, 0)
+    
 
 # <TILES>
 # 001:eccccccccc888888caaaaaaaca888888cacccccccacc0ccccacc0ccccacc0ccc
