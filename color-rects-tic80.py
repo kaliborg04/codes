@@ -1,17 +1,18 @@
 # script:  python
 
-t = 0
 cls(0)
 for i in range(0, 16):
     rect(9 * i, 6 * i, 6 * i, 3 * i, i)
+
+t = 0
 def TIC():
     global t
-    if t > 12:
+    if t > 1:
         t = 0
         for x in range(0, 240, 2):
             for y in range(0, 136, 2):
                 c = pix(x, y)
-                c = c + 1 % 15
+                c = (c + 1) % 16
                 pix(x, y, c)
     t = t + 1
 
