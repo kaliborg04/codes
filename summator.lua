@@ -1,7 +1,6 @@
 local N = 0
 while true do
-    local n = tonumber(io.read())
-    if n == 0 then
+    if tonumber(io.read()) == nil then
         print(N)
     end
     N = N + n
